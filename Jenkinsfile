@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('---echo---'){
+    stage('---clean---'){
       steps {
-        echo 'Hello World'
+        sh "g++ -o hw hw.cpp"        
       }
     }
   }
