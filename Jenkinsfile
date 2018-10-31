@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('---clean---'){
+    stage('---compile---'){
       steps {
-        sh "g++ -o hw hw.cpp"        
+        sh "g++ -o hw hw.cpp"
+      }
+    }
+    stage('---run---'){
+      steps {
+        sh "./hw"
       }
     }
   }
