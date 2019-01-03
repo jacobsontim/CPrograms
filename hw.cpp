@@ -8,6 +8,7 @@ int main()
 
 
   // this is my first comment
- 
+  // this is my second comment
+  //
 	return 0;
 }
