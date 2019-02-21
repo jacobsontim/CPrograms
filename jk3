@@ -2,24 +2,24 @@ pipeline {
   agent {
     node {
       label 'platform'
-      customWorkspace '/code' 
+      
     }
   }
    
   stages {
     stage('---compile---'){
       steps {
-        sh "/jenkins/bin/pipe4"
+        sh "g++ -o hw hw.cpp"
       }
     }
     stage('---run---'){
       steps {
-        sh "/jenkins/bin/pipe5"
+        sh "./hw"
       }
     }
     stage('---cleanup---'){
       steps {
-        sh "/jenkins/bin/pipe6"
+        sh "pwd"
       }
     }
   }
