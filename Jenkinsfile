@@ -11,5 +11,10 @@ pipeline {
         sh "./hw"
       }
     }
+    stage('---cleanup---'){
+      steps {
+        sh "pwd"
+      }
+    }
   }
 }
